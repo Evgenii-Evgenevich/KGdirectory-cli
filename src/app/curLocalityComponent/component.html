@@ -1,0 +1,30 @@
+<div>
+  <select (change)="selectCountry($event.target.value)">
+    <option value="0"></option>
+    <option *ngFor="let country of data.countries" [value]="country.id" [selected]="country.id === countryId">{{ country.name }} ({{ country.code }})</option>
+  </select>
+</div>
+<div>
+  <select (change)="selectRegion($event.target.value)">
+    <option value="0"></option>
+    <option *ngFor="let region of data.regions" [value]="region.id" [selected]="region.id === regionId">{{ region.name }} ({{ region.code }})</option>
+  </select>
+</div>
+<div>
+  <select (change)="selectDistrict($event.target.value)">
+    <option value="0"></option>
+    <option *ngFor="let district of data.districts" [value]="district.id"  [selected]="district.id === districtId">{{ district.name }} ({{ district.code }})</option>
+  </select>
+</div>
+<div>
+  <select (change)="selectTerritory($event.target.value)">
+    <option value="0"></option>
+    <option *ngFor="let territory of data.territories" [value]="territory.id" [selected]="territory.id === territoryId">{{ territory.name }} ({{ territory.code }})</option>
+  </select>
+</div>
+<div>
+  <select (change)="selectLocality($event.target.value)">
+    <option value="0"></option>
+    <option *ngFor="let locality of data.localities" [value]="locality.id" [selected]="locality.id === localityId">{{ locality.name }} ({{ locality.code }})</option>
+  </select>
+</div>
